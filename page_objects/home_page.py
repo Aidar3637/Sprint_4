@@ -11,8 +11,8 @@ class HomePage(BasePage):
         self.assert_url("https://qa-scooter.praktikum-services.ru/", "Не удалось перейти на главную страницу 'Самоката'")
 
     def check_logo_yandex(self):
-        # Клик по логотипу Яндекса
-        original_window = self.browser.current_window_handle
+        # Сохраняем текущее окно
+        original_window = self.get_current_window_handle()
         self.click_element(*HomePageLocators.YANDEX_LOGO)
 
         # Переключение на новое окно
@@ -22,4 +22,4 @@ class HomePage(BasePage):
         self.assert_url_contains("https://dzen.ru/", "Не удалось перейти на страницу Дзена")
 
         # Возвращение на исходное окно
-        self.browser.switch_to.window(original_window)
+        self.switch_to_window(original_window)

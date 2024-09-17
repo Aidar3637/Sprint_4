@@ -39,3 +39,9 @@ class BasePage:
         WebDriverWait(self.browser, timeout).until(EC.number_of_windows_to_be(2))
         new_window = [window for window in self.browser.window_handles if window != original_window][0]
         self.browser.switch_to.window(new_window)
+
+    def get_current_window_handle(self):
+        return self.browser.current_window_handle
+
+    def switch_to_window(self, window_handle):
+        self.browser.switch_to.window(window_handle)
