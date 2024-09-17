@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"2c1eb21cae3f1eaf06b34c79d4e76157","name":"test_faq_section","statistic":{"failed":0,"broken":0,"skipped":0,"passed":8,"unknown":0,"total":8}},{"uid":"3c58e329d6eb0bb70df701f1aa0dba08","name":"test_scooter_order","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}}]}
